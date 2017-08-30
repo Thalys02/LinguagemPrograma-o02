@@ -1,7 +1,7 @@
 package br.edu.unichristus.springdatalivraria;
 
 import java.math.BigDecimal;
-import java.sql.Date;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,8 +11,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-	@Table(name = "TB_LIVRO")
-	public class Livro {
+@Table(name = "TB_LIVRO")
+public class Livro {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "LIVRO_ID")
@@ -25,16 +25,15 @@ import javax.persistence.Table;
 	private int numeroPaginas;
 	@Column(name = "PRECO")
 	private BigDecimal preco;
-	//construtores abaixo , são gerados dois devido ter criado um construtor default
+
 	public Livro() {
 	}
-	
-	public Livro(String titulo, Date dataPublicacao, int numeroPaginas, BigDecimal
-	preco) {
-	this.titulo = titulo;
-	this.dataPublicacao = dataPublicacao;
-	this.numeroPaginas = numeroPaginas;
-	this.preco = preco;
+
+	public Livro(String titulo, Date dataPublicacao, int numeroPaginas, BigDecimal preco) {
+		this.titulo = titulo;
+		this.dataPublicacao = dataPublicacao;
+		this.numeroPaginas = numeroPaginas;
+		this.preco = preco;
 	}
 
 	public Long getLivroID() {
@@ -84,4 +83,5 @@ import javax.persistence.Table;
 	}
 	
 	
+
 }
