@@ -25,6 +25,7 @@ public class SpringDataLivrariaApplication implements CommandLineRunner {
 		Livro livro1 = this.servicoLivros.buscarPeloID(7L);
 		System.out.println(livro1);
 		
+		
 		// Buscando vários livros pelos seus IDs (1, 3 e 5)
 		List<Livro> livros2 = this.servicoLivros.buscarPelosIDs(new ArrayList<Long>() {{
 		    add(1L);
